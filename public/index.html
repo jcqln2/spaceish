@@ -5,6 +5,8 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -24,20 +26,177 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+   <title>Spaceish's Profile</title>
+       <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #1a0033, #0d0d2b);
+            color: #fff;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900"%3E%3Ccircle fill="%23ffffff10" cx="200" cy="200" r="5"/%3E%3Ccircle fill="%23ffffff10" cx="1200" cy="700" r="3"/%3E%3Ccircle fill="%23ffffff10" cx="400" cy="800" r="4"/%3E%3C/svg%3E');
+            background-size: cover;
+        }
+        .profile {
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid #3F00FF;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(63, 0, 255, 0.5);
+            margin: 20px;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(63, 0, 255, 0.5); }
+            to { box-shadow: 0 0 30px rgba(0, 221, 235, 0.7); }
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #00DDEB;
+            box-shadow: 0 0 15px #00DDEB;
+            transition: transform 0.3s;
+        }
+        .header img:hover {
+            transform: scale(1.1);
+        }
+        .header h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #3F00FF;
+            font-size: 2.5em;
+            margin: 10px 0;
+            text-shadow: 0 0 10px #3F00FF;
+        }
+        .header p {
+            color: #A100F2;
+            font-size: 1.1em;
+        }
+        .bio {
+            background: rgba(0, 221, 235, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 1px solid #00DDEB;
+        }
+        .bio h2 {
+            color: #00DDEB;
+            font-family: 'Orbitron', sans-serif;
+            margin-top: 0;
+        }
+        .bio p {
+            color: #fff;
+            line-height: 1.6;
+        }
+        .receive {
+            background: rgba(161, 0, 242, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #A100F2;
+        }
+        .receive h2 {
+            color: #A100F2;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .receive p {
+            color: #fff;
+            margin: 10px 0;
+        }
+        #wallet-qr {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #3F00FF;
+            margin: 10px auto;
+            display: block;
+        }
+        .tip-button {
+            background: linear-gradient(45deg, #3F00FF, #A100F2);
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .tip-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px #3F00FF;
+        }
+        .friends {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .friends h2 {
+            color: #00DDEB;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .friends ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .friends li img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #A100F2;
+            transition: transform 0.3s;
+        }
+        .friends li img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <div class="header">
+            <img src="https://via.placeholder.com/120?text=Z-Grok" alt="Profile Pic">
+            <h1>Spaceish Profile</h1>
+            <p>Orbiting the Cosmos • Online Now</p>
+        </div>
+        <div class="bio">
+            <h2>About Me</h2>
+            <p>Hey, I'm Zuky, Send me some stardust (crypto) to keep the party going!</p>
+        </div>
+        <div class="receive">
+            <h2>Show some love</h2>
+            <p>Send ETH or tokens to: <span id="wallet-address">0x1234...abcd</span></p>
+            <img id="wallet-qr" src="https://via.placeholder.com/150?text=QR+Code" alt="Wallet QR">
+            <p>Secure identity via ERC-725. Receiving only—keep it cosmic!</p>
+            <button class="tip-button">Copy Wallet Address</button>
+        </div>
+        <div class="friends">
+            <h2>Current main characters</h2>
+            <ul>
+                <li><img src="https://via.placeholder.com/60?text=Proto" alt="Friend1"></li>
+                <li><img src="https://via.placeholder.com/60?text=Nebula" alt="Friend2"></li>
+                <li><img src="https://via.placeholder.com/60?text=Orbit" alt="Friend3"></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Mock ERC-725 wallet address (replace with ethers.js in production)
+        const walletAddress = '0xYourEthereumAddressHere';
+        document.getElementById('wallet-address').textContent = walletAddress;
+        document.querySelector('.tip-button').addEventListener('click', () => {
+            navigator.clipboard.writeText(walletAddress);
+            alert('Wallet address copied! Paste it in your crypto wallet to send.');
+        });
+    </script>
+</body>
 </html>
