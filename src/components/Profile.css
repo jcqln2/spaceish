@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap');
+
+/* body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkslategrey;
+ 
+  background: linear-gradient(120deg, #a18cd1, #fbc2eb, #fad0c4, #ffd1ff);
+  background-size: 300% 300%;
+  
+  animation: gradientPulse 12s ease infinite;
+}
+
+@keyframes gradientPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+/* begin gradient */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkslategrey;
+  /* Gradient matching the attached image */
+  background: linear-gradient(
+    90deg,
+    #d3e0ea, /* soft blue */
+    #f4c7c3, /* soft pink */
+    #f8e1b6, /* soft peach */
+    #e0d3e8  /* soft lavender */
+  );
+  background-size: 300% 300%;
+  /* Smooth pulsing animation */
+  animation: gradientPulse 12s ease infinite;
+}
+
+@keyframes gradientPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* end gradient */
+.profile {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+   border: 2px solid #11f7f4;
+  /* border: 2px solid #3f00ff; */
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(63, 0, 255, 0.5);
+  margin: 20px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 20px rgba(63, 0, 255, 0.5); }
+  to { box-shadow: 0 0 30px rgba(0, 221, 235, 0.7); }
+}
+
+.header { text-align: center; margin-bottom: 20px; }
+.header img {
+  width: 120px; height: 120px; border-radius: 50%; border: 3px solid #00ddeb;
+  box-shadow: 0 0 15px #00ddeb; transition: transform 0.3s;
+}
+.header img:hover { transform: scale(1.1); }
+.header h1 {
+  font-family: "Orbitron", sans-serif; color: #3f00ff; font-size: 2.5em;
+  margin: 10px 0; text-shadow: 0 0 10px #3f00ff;
+}
+.header p { color: #a100f2; font-size: 1.1em; }
+
+.bio {
+  background: rgba(0, 221, 235, 0.1); padding: 20px; border-radius: 15px;
+  margin: 20px 0; border: 1px solid #00ddeb;
+}
+.bio h2 { color: #00ddeb; font-family: "Orbitron", sans-serif; margin-top: 0; }
+.bio p { color: darkslategrey; line-height: 1.6; } /* Changed from black */
+
+.receive {
+  background: rgba(161, 0, 242, 0.1); padding: 20px; border-radius: 15px;
+  text-align: center; border: 1px solid #a100f2;
+}
+.receive h2 { color: #a100f2; font-family: "Orbitron", sans-serif; }
+.receive p { color: black; margin: 10px 0; } /* Changed from black */
+
+#wallet-qr {
+  width: 150px; height: 150px; border-radius: 10px; border: 2px solid #3f00ff;
+  margin: 10px auto; display: block;
+}
+
+.tip-button {
+  background: linear-gradient(45deg, #3f00ff, #a100f2); color: #fff;
+  padding: 12px 24px; border: none; border-radius: 25px;
+  font-family: "Orbitron", sans-serif; font-size: 1em; cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.tip-button:hover { transform: translateY(-3px); box-shadow: 0 0 15px #3f00ff; }
+
+.friends { margin-top: 20px; text-align: center; }
+.friends h2 { color: #00ddeb; font-family: "Orbitron", sans-serif; }
+.friends ul {
+  list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;
+}
+.friends li img {
+  width: 60px; height: 60px; border-radius: 50%; border: 2px solid #a100f2;
+  transition: transform 0.3s;
+}
+.friends li img:hover { transform: scale(1.2); }
+
+/* In Profile.css */
+#wallet-qr {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 2px solid #3F00FF;
+  margin: 10px auto;
+  display: block;
+}
